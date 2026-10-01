@@ -1,0 +1,9 @@
+.footerContainer {
+    display: block;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.875rem;
+    color: var(--text);
+    background-color: var(--bg);
+    margin-top: auto;
+}

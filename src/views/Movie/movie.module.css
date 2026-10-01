@@ -1,0 +1,5 @@
+.movie img {
+    width: 220px;
+    height: 330px;
+    object-fit: cover;
+}

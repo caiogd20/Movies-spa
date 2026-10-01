@@ -1,0 +1,35 @@
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--bg);
+}
+
+.headerTitle {
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.headerNav {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.headerNav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.headerNav a:hover {
+    color: var(--accent);
+    background: var(--accent-bg);
+}
