@@ -32,7 +32,7 @@ export default function MovieCard({ movie }) {
             </Link>
             <div className={styles.movieCardContent}>
                 <h3>{movie.title}</h3>
-                <span>⭐ {movie.vote_average}</span>
+                <span>★ {movie.vote_average.toFixed(1)}</span>
                 {renderButton()}
             </div>
         </article>

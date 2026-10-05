@@ -5,11 +5,19 @@ import { getMovie } from "../../services/movies.services";
 import { useQueryClient } from "@tanstack/react-query";
 
 export default function Movies() {
-    const { data: movies, isLoading } = useMovies();
+    const { data: movies, isLoading, isError, refetch } = useMovies();
     const queryClient = useQueryClient();
 
     if (isLoading) {
         return <p>Carregando...</p>;
+    }
+    if (isError) {
+        return (
+            <div role="alert">
+                <p>Não foi possível carregar os filmes.</p>
+                <button onClick={() => refetch()}>Tentar novamente</button>
+            </div>
+        );
     }
     function prefetchMovie(movieId) {
         queryClient.prefetchQuery({

@@ -1,5 +1,46 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 144px);
+    background: #05070d;
+}
+
+.pageDescription {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+.pageDescription p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+}
+.pageLinks {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    list-style: none;
+}
+.pageLinks a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.25rem 0.1rem;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+
 .pageTitle {
-    font-size: 2.25rem;
-    line-height: 1.2;
-    margin: 2rem 0;
+    margin: 0 0 1.5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
 }

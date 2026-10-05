@@ -17,7 +17,7 @@ export default function Movie() {
             />
             <h1>{movie.title}</h1>
             <div>{movie.overview}</div>
-            <div>⭐ {movie.vote_average}</div>
+            <div>★ {movie.vote_average.toFixed(1)}</div>
         </article>
     );
 }
