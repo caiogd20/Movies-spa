@@ -1,23 +1,54 @@
-# Movie SPA
+# Movies SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page movie browser built with React and Vite, powered by [The Movie Database (TMDB)](https://www.themoviedb.org/) API.
 
-Currently, two official plugins are available:
+**Live demo:** https://movies-spa-six.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Screenshots
 
-## React Compiler
+![Home screen](./docs/Home.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Movies screen](./docs/Movies.png)
 
-## Expanding the ESLint configuration
+![Favorites screen](./docs/Favoritos.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-## Local development
+## Features
 
-Copy `.env.example` to `.env.local` and set `TMDB_API_TOKEN`. Run `npx vercel dev` to use the `/api/movies` serverless function locally.
+- Browse popular movies in a card grid, each with poster, title and rating
+- Movie details page with poster and synopsis
+- Favorites tab: save and remove movies, with state managed by Redux
+- Prefetching: movie data starts loading when you hover a card, so the details page opens faster
+- Server-state caching with React Query, avoiding repeated requests
 
-## Deploy on Vercel
+## Tech stack
 
-Import the repository into Vercel and select the Vite framework preset. Use `npm run build` as the build command and `dist` as the output directory. Add `TMDB_API_TOKEN` under Project Settings > Environment Variables for the environments you use, then redeploy. The SPA route fallback is configured in `vercel.json`.
+- **React** + **Vite**
+- **Redux** for favorites state
+- **React Query** for data fetching, caching and prefetching
+- **Axios** for HTTP requests
+- **Jest** for unit tests
+- Deployed on **Vercel**
+
+## Getting started
+
+```bash
+git clone https://github.com/caiogd20/Movies-spa.git
+cd Movies-spa
+npm install
+cp .env.example .env   # then fill in your TMDB credentials
+npm run dev
+```
+
+You can get a free API key at [themoviedb.org](https://www.themoviedb.org/settings/api).
+
+## Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm test` | Run the unit tests |
+
+## Credits
+
+This product uses the TMDB API but is not endorsed or certified by TMDB.
